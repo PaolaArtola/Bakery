@@ -3,8 +3,8 @@ import fadeCarrousel from '../components/fadeCarrousel.vue'
 
 const cakeImages = [
   '/src/assets/about/filler.png',
+  '/src/assets/about/header1.jpg',
   '/src/assets/about/header1.png',
-  '/src/assets/about/filler.png',
 ]
 </script>
 <template>
@@ -57,6 +57,12 @@ const cakeImages = [
       </div>
     </div>
   </div>
+  <img
+    src="@/assets/about/buttom.jpeg"
+    class="w-full max-w-4xl aspect-[5/2] mx-auto object-cover"
+    alt="Promotional image or banner"
+    loading="lazy"
+  />
 </template>
 
 <style scoped>
