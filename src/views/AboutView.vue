@@ -1,10 +1,18 @@
+<script setup lang="ts">
+import fadeCarrousel from '../components/fadeCarrousel.vue'
+
+const cakeImages = [
+  '/src/assets/about/filler.png',
+  '/src/assets/about/header1.png',
+  '/src/assets/about/filler.png',
+]
+</script>
 <template>
   <div class="about flex flex-col gap-6 justify-between items-center">
     <div class="base-image w-[86%] aspect-[16/9] relative rounded-lg shadow-md overflow-hidden">
-      <img
-        src="@/assets/about/header1.jpg"
-        alt="Header image"
-        class="absolute inset-0 w-full h-full object-cover"
+      <fadeCarrousel
+        :images="cakeImages"
+        container-class="absolute inset-0 w-full h-full object-cover"
       />
     </div>
     <h1 class="">About Us</h1>
