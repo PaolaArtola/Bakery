@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import CustomHeader from '@/components/header.vue'
+import CustomFooter from '@/components/footer.vue'
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import CustomHeader from '@/components/header.vue'
     <!-- Adjust `mt` to match header height -->
     <RouterView />
   </main>
+
+  <CustomFooter />
 </template>
 
 <style scoped></style>

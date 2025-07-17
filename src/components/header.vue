@@ -52,7 +52,7 @@ onUnmounted(() => {
         <!-- Animated hamburger lines -->
         <span
           class="block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out transform origin-center"
-          :class="{ 'rotate-45 translate-y-1.5': isOpen, 'translate-y-0': !isOpen }"
+          :class="{ 'rotate-45 translate-y-[2px]': isOpen, 'translate-y-3': !isOpen }"
         ></span>
         <span
           class="block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out my-1"
@@ -60,7 +60,7 @@ onUnmounted(() => {
         ></span>
         <span
           class="block w-6 h-0.5 bg-gray-800 transition-all duration-300 ease-in-out transform origin-center"
-          :class="{ '-rotate-45 -translate-y-1.5': isOpen, 'translate-y-0': !isOpen }"
+          :class="{ '-rotate-45 -translate-y-[2px]': isOpen, ' -translate-y-3': !isOpen }"
         ></span>
       </button>
 
