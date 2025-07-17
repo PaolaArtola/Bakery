@@ -7,6 +7,39 @@
       totam perspiciatis natus minima quisquam laborum unde nisi eaque aspernatur quia aliquam,
       dolorum impedit quos. Eaque, minus?
     </p>
+
+    <!-- Segunda sección con imagen a la derecha en pantallas grandes -->
+    <div class="flex flex-col md:flex-row-reverse items-center gap-6 p-6 max-w-7xl mx-auto">
+      <img
+        src="@/assets/about/filler.png"
+        alt="A nice cake"
+        class="w-full md:w-1/2 rounded-lg shadow-md"
+      />
+      <div class="text-center md:text-left md:w-1/2 space-y-4">
+        <h2 class="text-3xl font-bold text-gray-800">Our Mission</h2>
+        <p class="text-gray-600 leading-relaxed text-pretty">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, commodi quas tempora
+          consequuntur, dolorum, enim quidem praesentium labore molestiae inventore nisi officia ea?
+          Sapiente reprehenderit sunt iure, et qui incidunt.
+        </p>
+      </div>
+    </div>
+    <!-- Primera sección -->
+    <div class="flex flex-col md:flex-row items-center gap-6 p-6 max-w-7xl mx-auto">
+      <img
+        src="@/assets/about/filler.png"
+        alt="A nice cake"
+        class="w-full md:w-1/2 rounded-lg shadow-md"
+      />
+      <div class="text-center md:text-left md:w-1/2 space-y-4">
+        <h2>Our Promise</h2>
+        <p class="text-gray-600 leading-relaxed text-pretty">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, commodi quas tempora
+          consequuntur, dolorum, enim quidem praesentium labore molestiae inventore nisi officia ea?
+          Sapiente reprehenderit sunt iure, et qui incidunt.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
