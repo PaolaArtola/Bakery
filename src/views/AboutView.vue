@@ -1,6 +1,12 @@
 <template>
   <div class="about flex flex-col gap-6 justify-between items-center">
-    <img class="base-image w-[86%]" src="@/assets/about/header1.png" />
+    <div class="base-image w-[86%] aspect-[16/9] relative rounded-lg shadow-md overflow-hidden">
+      <img
+        src="@/assets/about/header1.jpg"
+        alt="Header image"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+    </div>
     <h1 class="">About Us</h1>
     <p class="w-[70%] text-center text-base text-gray-70 leading-relaxed">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptate quod! Quis, quod
