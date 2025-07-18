@@ -9,14 +9,16 @@ const cakeImages = [
 </script>
 <template>
   <div class="about flex flex-col gap-6 justify-between items-center">
-    <div class="base-image w-[86%] aspect-[16/9] relative rounded-lg shadow-md overflow-hidden">
+    <div
+      class="base-image w-[86%] xl:w-[80rem] aspect-[16/9] relative rounded-lg shadow-md overflow-hidden"
+    >
       <fadeCarrousel
         :images="cakeImages"
         container-class="absolute inset-0 w-full h-full object-cover"
       />
     </div>
     <h1 class="">Sobre Nosotros</h1>
-    <p class="w-[70%] text-center text-base text-gray-70 leading-relaxed">
+    <p class="w-[70%] xl:w-[80rem] text-center text-base text-gray-70 leading-relaxed">
       En Sunny Bakery, horneamos con el corazón. Somos una panadería artesanal inspirada en la
       calidez del hogar y el amor incondicional de Sunny, nuestra perrita y alma de este proyecto.
       Cada pan, pastel y dulce que sale de nuestro horno está hecho con ingredientes frescos,
