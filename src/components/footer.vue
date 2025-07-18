@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-gray-50 py-12 px-4 md:px-16">
-    <div class="max-w-6xl mx-auto">
+  <div class="bg-gray-50 py-12 px-4 md:px-16 flex flex-col justify-between items-center">
+    <div class="w-[90%] mx-auto">
       <div
-        class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 snap-center"
+        class="flex flex-col [@media(min-width:620px)]:flex-row [@media(max-width:620px)]:items-center [@media(max-width:620px)]:pb-8 justify-between items-start gap-8 snap-center"
       >
         <!-- Left Section - Visit Us Info -->
         <div class="flex flex-col gap-4">
