@@ -13,11 +13,6 @@
             lo que necesites.
           </p>
           <p>
-            Nuestro compromiso es ofrecerte no solo los mejores productos, sino también una atención
-            cálida y cercana. Puedes contactarnos para pedidos especiales, eventos o cualquier otra
-            consulta relacionada con nuestra panadería.
-          </p>
-          <p>
             Completa el formulario y uno de nuestros miembros del equipo se comunicará contigo
             dentro de las próximas 24 horas. ¡Estamos aquí para ti y con muchas ganas de escucharte!
           </p>
