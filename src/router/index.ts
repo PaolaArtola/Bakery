@@ -18,6 +18,16 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue'),
     },
     {
+      path: '/special-orders',
+      name: 'special',
+      component: () => import('../views/SpecialOrder.vue'),
+    },
+    {
+      path: '/contact',
+      name: 'contact',
+      component: () => import('../views/Contact.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'NotFund',
       component: () => import('../views/NotFound.vue'),
