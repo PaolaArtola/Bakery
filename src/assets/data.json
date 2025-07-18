@@ -1,73 +1,205 @@
 {
-  "selections": [
-    {
-      "name": "Cookies",
-      "products": [
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        },
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        },
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        }
-      ]
-    },
-    {
-      "name": "Waffles",
-      "products": [
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        }
-      ]
-    },
-    {
-      "name": "Macarrons",
-      "products": [
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        },
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        },
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        }
-      ]
-    },
-    {
-      "name": "Snacks",
-      "products": [
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        },
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        }
-      ]
-    },
-    {
-      "name": "Beverage",
-      "products": [
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        },
-        {
-          "image": "../assets/test.png",
-          "name": "Lorem Ipsum"
-        }
-      ]
-    }
-  ]
+  "menuItems": [
+    { "id": "cookies", "name": "Cookies" },
+    { "id": "waffles", "name": "Waffles" },
+    { "id": "macaroons", "name": "Macaroons" },
+    { "id": "snacks", "name": "Snacks" },
+    { "id": "beverage", "name": "Beverage" }
+  ],
+  "products": {
+    "cookies": [
+      {
+        "id": 1,
+        "name": "Chocolate Chip Cookies",
+        "description": "Classic homemade chocolate chip cookies with premium chocolate chips",
+        "price": "$12.99",
+        "image": "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=300&fit=crop",
+        "category": "cookies"
+      },
+      {
+        "id": 2,
+        "name": "Double Chocolate Cookies",
+        "description": "Rich chocolate cookies loaded with chocolate chunks",
+        "price": "$14.99",
+        "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=300&h=300&fit=crop",
+        "category": "cookies"
+      },
+      {
+        "id": 3,
+        "name": "Oatmeal Raisin Cookies",
+        "description": "Soft and chewy oatmeal cookies with plump raisins",
+        "price": "$11.99",
+        "image": "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=300&h=300&fit=crop",
+        "category": "cookies"
+      },
+      {
+        "id": 4,
+        "name": "Sugar Cookies",
+        "description": "Traditional sugar cookies with a soft, sweet flavor",
+        "price": "$10.99",
+        "image": "https://images.unsplash.com/photo-1577308856961-8e636e2a3bb0?w=300&h=300&fit=crop",
+        "category": "cookies"
+      },
+      {
+        "id": 5,
+        "name": "Peanut Butter Cookies",
+        "description": "Creamy peanut butter cookies with the perfect texture",
+        "price": "$13.99",
+        "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&h=300&fit=crop",
+        "category": "cookies"
+      },
+      {
+        "id": 6,
+        "name": "Snickerdoodle Cookies",
+        "description": "Cinnamon sugar cookies with a soft, tender crumb",
+        "price": "$12.99",
+        "image": "https://images.unsplash.com/photo-1603532648955-039310d9ed75?w=300&h=300&fit=crop",
+        "category": "cookies"
+      }
+    ],
+    "waffles": [
+      {
+        "id": 7,
+        "name": "Classic Waffles",
+        "description": "Traditional Belgian-style waffles with crispy exterior",
+        "price": "$8.99",
+        "image": "https://images.unsplash.com/photo-1562376552-0d160dee0de9?w=300&h=300&fit=crop",
+        "category": "waffles"
+      },
+      {
+        "id": 8,
+        "name": "Belgian Waffles",
+        "description": "Authentic Belgian waffles with deep pockets for syrup",
+        "price": "$9.99",
+        "image": "https://images.unsplash.com/photo-1541599468348-e96984315921?w=300&h=300&fit=crop",
+        "category": "waffles"
+      },
+      {
+        "id": 9,
+        "name": "Chocolate Waffles",
+        "description": "Decadent chocolate waffles with rich cocoa flavor",
+        "price": "$10.99",
+        "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=300&h=300&fit=crop",
+        "category": "waffles"
+      },
+      {
+        "id": 10,
+        "name": "Blueberry Waffles",
+        "description": "Fresh blueberry waffles bursting with fruit flavor",
+        "price": "$11.99",
+        "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop",
+        "category": "waffles"
+      }
+    ],
+    "macaroons": [
+      {
+        "id": 11,
+        "name": "French Macaroons",
+        "description": "Delicate almond macaroons with smooth ganache filling",
+        "price": "$18.99",
+        "image": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=300&fit=crop",
+        "category": "macaroons"
+      },
+      {
+        "id": 12,
+        "name": "Coconut Macaroons",
+        "description": "Sweet coconut macaroons with a chewy texture",
+        "price": "$15.99",
+        "image": "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=300&h=300&fit=crop",
+        "category": "macaroons"
+      },
+      {
+        "id": 13,
+        "name": "Chocolate Macaroons",
+        "description": "Rich chocolate macaroons with dark chocolate filling",
+        "price": "$19.99",
+        "image": "https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=300&h=300&fit=crop",
+        "category": "macaroons"
+      },
+      {
+        "id": 14,
+        "name": "Vanilla Macaroons",
+        "description": "Classic vanilla macaroons with buttercream filling",
+        "price": "$17.99",
+        "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop",
+        "category": "macaroons"
+      }
+    ],
+    "snacks": [
+      {
+        "id": 15,
+        "name": "Mixed Nuts",
+        "description": "Premium blend of roasted almonds, cashews, and pecans",
+        "price": "$9.99",
+        "image": "https://images.unsplash.com/photo-1566842600175-97dca489844f?w=300&h=300&fit=crop",
+        "category": "snacks"
+      },
+      {
+        "id": 16,
+        "name": "Granola Bars",
+        "description": "Healthy oats and honey granola bars with dried fruits",
+        "price": "$7.99",
+        "image": "https://images.unsplash.com/photo-1564669732666-d0b9ba7c1d5a?w=300&h=300&fit=crop",
+        "category": "snacks"
+      },
+      {
+        "id": 17,
+        "name": "Trail Mix",
+        "description": "Energy-packed mix of nuts, seeds, and dried fruits",
+        "price": "$8.99",
+        "image": "https://images.unsplash.com/photo-1599909533730-b7b3aa2b4a20?w=300&h=300&fit=crop",
+        "category": "snacks"
+      },
+      {
+        "id": 18,
+        "name": "Protein Bars",
+        "description": "High-protein bars with natural ingredients",
+        "price": "$12.99",
+        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop",
+        "category": "snacks"
+      }
+    ],
+    "beverage": [
+      {
+        "id": 19,
+        "name": "Fresh Coffee",
+        "description": "Freshly brewed artisan coffee with rich aroma",
+        "price": "$4.99",
+        "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=300&h=300&fit=crop",
+        "category": "beverage"
+      },
+      {
+        "id": 20,
+        "name": "Hot Chocolate",
+        "description": "Rich and creamy hot chocolate with whipped cream",
+        "price": "$5.99",
+        "image": "https://images.unsplash.com/photo-1542990253-0b8319c4424e?w=300&h=300&fit=crop",
+        "category": "beverage"
+      },
+      {
+        "id": 21,
+        "name": "Iced Tea",
+        "description": "Refreshing iced tea with natural flavors",
+        "price": "$3.99",
+        "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&h=300&fit=crop",
+        "category": "beverage"
+      },
+      {
+        "id": 22,
+        "name": "Smoothies",
+        "description": "Fresh fruit smoothies with organic ingredients",
+        "price": "$6.99",
+        "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=300&h=300&fit=crop",
+        "category": "beverage"
+      },
+      {
+        "id": 23,
+        "name": "Lemonade",
+        "description": "Fresh squeezed lemonade with real lemons",
+        "price": "$4.49",
+        "image": "https://images.unsplash.com/photo-1523371683702-bbbd65d0d5e3?w=300&h=300&fit=crop",
+        "category": "beverage"
+      }
+    ]
+  }
 }
