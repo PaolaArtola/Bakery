@@ -14,7 +14,7 @@
     <div
       class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 gap-6"
     >
-      <h2 class="text-2xl md:text-3xl font-semibold">¿Quieres saber más sobre nosotros?</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold">Descubre nuestros productos</h2>
     </div>
   </div>
   <div class="min-h-screen bg-[#ffeaed]">
