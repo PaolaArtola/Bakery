@@ -25,19 +25,19 @@ const productos = [
 // Lista de feedbacks
 const feedbackList = [
   {
-    name: 'Camila López',
+    name: 'Pilar Ruiz',
     comment: 'Los pasteles son deliciosos y el servicio es excelente.',
   },
   {
-    name: 'Renato Díaz',
+    name: 'Marcos Alvarado',
     comment: 'Siempre compro aquí para celebraciones. ¡Recomendado!',
   },
   {
-    name: 'Lucía Torres',
+    name: 'Pierre Artola',
     comment: 'Rápidos, frescos y con muy buena presentación.',
   },
   {
-    name: 'Sofía García',
+    name: 'Adrián Artola',
     comment: 'El cheesecake fue el favorito de la fiesta. ¡Gracias!',
   },
 ]
