@@ -37,7 +37,7 @@
         "name": "Sugar Cookies",
         "description": "Traditional sugar cookies with a soft, sweet flavor",
         "price": "$10.99",
-        "image": "https://images.unsplash.com/photo-1577308856961-8e636e2a3bb0?w=300&h=300&fit=crop",
+        "image": "/src/assets/store/sugar_cookie.webp",
         "category": "cookies"
       },
       {

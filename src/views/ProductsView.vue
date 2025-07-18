@@ -159,7 +159,9 @@
                     <img
                       :src="item.image"
                       :alt="item.name"
-                      class="base-image w-full h-full object-cover"
+                      height="300px"
+                      width="300px"
+                      class="base-image w-[300px] h-[300px] object-cover"
                     />
                   </div>
                   <div
