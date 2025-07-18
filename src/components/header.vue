@@ -177,7 +177,7 @@ nav {
 
 /* Active route styling */
 .router-link-active {
-  color: #d97706; /* amber-600 */
+  color: #cc4156; /* amber-600 */
 }
 
 .router-link-active span {
