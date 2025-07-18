@@ -17,4 +17,287 @@
       <h2 class="text-2xl md:text-3xl font-semibold">¿Quieres saber más sobre nosotros?</h2>
     </div>
   </div>
+  <div class="min-h-screen bg-pink-50">
+    <!-- Mobile Top Bar (visible on screens < md) -->
+    <div class="md:hidden bg-white p-4">
+      <div class="flex space-x-2 overflow-x-auto">
+        <button
+          v-for="item in menuItems"
+          :key="item.id"
+          @click="activeCategory = item.id"
+          :class="[
+            'px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors',
+            activeCategory === item.id
+              ? 'bg-red-500 text-white'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200',
+          ]"
+        >
+          {{ item.name }}
+        </button>
+      </div>
+    </div>
+
+    <div class="flex">
+      <!-- Desktop Sidebar (visible on screens >= md) -->
+      <div class="hidden md:block w-48 bg-white min-h-screen">
+        <nav class="p-6">
+          <ul class="space-y-4">
+            <li v-for="item in menuItems" :key="item.id">
+              <button
+                @click="activeCategory = item.id"
+                :class="[
+                  'w-full text-left py-2 px-4 rounded-lg transition-colors',
+                  activeCategory === item.id
+                    ? 'bg-red-100 text-red-600 font-medium'
+                    : 'text-gray-700 hover:bg-gray-100',
+                ]"
+              >
+                {{ item.name }}
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 p-6">
+        <div class="mx-auto">
+          <!-- Loading State -->
+          <div v-if="loading" class="text-center py-12">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 mb-4"></div>
+            <p class="text-gray-600">Loading menu...</p>
+          </div>
+
+          <!-- Error State -->
+          <div v-else-if="error" class="text-center py-12">
+            <div class="text-red-500 mb-4">
+              <svg class="mx-auto h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <p class="text-gray-600 mb-4">Failed to load menu data</p>
+            <button
+              @click="retryFetch"
+              class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              Retry
+            </button>
+          </div>
+
+          <!-- Menu Content -->
+          <div v-else>
+            <!-- All Categories View -->
+            <div v-if="activeCategory === 'all'">
+              <div
+                v-for="category in getCurrentCategoryItems()"
+                :key="category.categoryId"
+                class="mb-12"
+              >
+                <h2 class="text-center text-2xl font-bold text-gray-800 mb-6 pb-2">
+                  {{ category.categoryName }}
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div
+                    v-for="item in category.items"
+                    :key="item.id"
+                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div class="aspect-square bg-gray-100 flex items-center justify-center">
+                      <img :src="item.image" :alt="item.name" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4">
+                      <h3 class="text-lg font-medium text-gray-800 mb-2">
+                        {{ item.name }}
+                      </h3>
+                      <p v-if="item.description" class="text-sm text-gray-600 mb-3">
+                        {{ item.description }}
+                      </p>
+                      <div class="flex items-center justify-between">
+                        <span v-if="item.price" class="text-lg font-bold text-red-500">
+                          {{ item.price }}
+                        </span>
+                        <button
+                          class="bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-full font-medium transition-colors"
+                        >
+                          Order Now
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Category View -->
+            <div v-else>
+              <h1 class="text-3xl font-bold text-red-500 text-center mb-8">
+                {{ getCurrentCategoryName() }}
+              </h1>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div
+                  v-for="item in getCurrentCategoryItems()"
+                  :key="item.id"
+                  class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                >
+                  <div class="aspect-square bg-gray-100 flex items-center justify-center">
+                    <img :src="item.image" :alt="item.name" class="w-full h-full object-cover" />
+                  </div>
+                  <div class="p-4">
+                    <h3 class="text-lg font-medium text-gray-800 mb-2">
+                      {{ item.name }}
+                    </h3>
+                    <p v-if="item.description" class="text-sm text-gray-600 mb-3">
+                      {{ item.description }}
+                    </p>
+                    <div class="flex items-center justify-between">
+                      <span v-if="item.price" class="text-lg font-bold text-red-500">
+                        {{ item.price }}
+                      </span>
+                      <button
+                        class="bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-full font-medium transition-colors"
+                      >
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Empty State for Single Category -->
+              <div v-if="getCurrentCategoryItems().length === 0" class="text-center py-12">
+                <p class="text-gray-600">No items available in this category.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'CookieMenu',
+  data() {
+    return {
+      activeCategory: 'all',
+      menuItems: [],
+      products: {},
+      loading: true,
+      error: null,
+      dataUrl: '/src/assets/data.json',
+    }
+  },
+  async mounted() {
+    await this.fetchMenuData()
+  },
+  methods: {
+    async fetchMenuData() {
+      try {
+        this.loading = true
+        this.error = null
+
+        const response = await fetch(this.dataUrl)
+
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+
+        const data = await response.json()
+
+        // Add "All" option at the beginning
+        this.menuItems = [{ id: 'all', name: 'All' }, ...(data.menuItems || [])]
+        this.products = data.products || {}
+
+        // Set default category to "all"
+        this.activeCategory = 'all'
+      } catch (error) {
+        console.error('Error fetching menu data:', error)
+        this.error = error.message
+
+        // Fallback to default data if fetch fails
+        this.loadFallbackData()
+      } finally {
+        this.loading = false
+      }
+    },
+
+    loadFallbackData() {
+      // Fallback data in case the external JSON fails to load
+      this.menuItems = [
+        { id: 'all', name: 'All' },
+        { id: 'cookies', name: 'Cookies' },
+        { id: 'waffles', name: 'Waffles' },
+        { id: 'macaroons', name: 'Macaroons' },
+        { id: 'snacks', name: 'Snacks' },
+        { id: 'beverage', name: 'Beverage' },
+      ]
+
+      this.products = {
+        cookies: [
+          {
+            id: 1,
+            name: 'Chocolate Chip Cookies',
+            description: 'Classic homemade chocolate chip cookies',
+            price: '$12.99',
+            image:
+              'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=300&h=300&fit=crop',
+          },
+        ],
+      }
+    },
+
+    getCurrentCategoryName() {
+      const category = this.menuItems.find((item) => item.id === this.activeCategory)
+      return category ? category.name : 'Menu'
+    },
+
+    getCurrentCategoryItems() {
+      if (this.activeCategory === 'all') {
+        // Return organized data by categories for "All" view
+        const organizedData = []
+        this.menuItems.forEach((menuItem) => {
+          if (menuItem.id !== 'all' && this.products[menuItem.id]) {
+            organizedData.push({
+              categoryId: menuItem.id,
+              categoryName: menuItem.name,
+              items: this.products[menuItem.id],
+            })
+          }
+        })
+        return organizedData
+      }
+      return this.products[this.activeCategory] || []
+    },
+
+    async retryFetch() {
+      await this.fetchMenuData()
+    },
+  },
+}
+</script>
+
+<style scoped>
+/* Custom scrollbar for mobile top bar */
+.overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.overflow-x-auto::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+</style>
