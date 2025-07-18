@@ -49,9 +49,10 @@
                 :class="[
                   'w-full text-left py-2 px-4 rounded-lg transition-colors',
                   activeCategory === item.id
-                    ? 'bg-[#fff5f5] text-[#d62a2a] font-medium'
+                    ? 'bg-[#fff5f5] text-[#d62a2a]'
                     : 'text-gray-700 hover:bg-gray-100',
                 ]"
+                style="font-weight: 600 !important"
               >
                 {{ item.name }}
               </button>
