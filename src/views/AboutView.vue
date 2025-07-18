@@ -79,7 +79,7 @@ const cakeImages = [
     <div
       class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 gap-6"
     >
-      <h2 class="text-2xl md:text-3xl font-semibold">Want To Know More About Us?</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold">¿Quieres saber más sobre nosotros?</h2>
       <button
         class="base-button text-white px-8 py-4 rounded-full shadow"
         style="font-weight: 700 !important"
