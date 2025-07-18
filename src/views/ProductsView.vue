@@ -17,7 +17,7 @@
       <h2 class="text-2xl md:text-3xl font-semibold">¿Quieres saber más sobre nosotros?</h2>
     </div>
   </div>
-  <div class="min-h-screen bg-[#ffccd3]">
+  <div class="min-h-screen bg-[#ffeaed]">
     <!-- Mobile Top Bar (visible on screens < md) -->
     <div class="md:hidden bg-white p-4">
       <div ref="scrollContainer" class="flex space-x-2 gap-1.5 overflow-x-auto scrollbar-hide">
@@ -103,8 +103,12 @@
                 <h2 class="text-center text-2xl font-bold text-gray-800 mb-6 py-6">
                   {{ category.categoryName }}
                 </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
-                  <div v-for="item in category.items" :key="item.id" class="overflow-hidden">
+                <div class="grid responsive-grid gap-6">
+                  <div
+                    v-for="item in category.items"
+                    :key="item.id"
+                    class="flex [@media(min-width:450px)]:block overflow-hidden"
+                  >
                     <div class="aspect-square flex items-center justify-center">
                       <img
                         :src="item.image"
@@ -145,9 +149,7 @@
               <h1 class="text-3xl font-bold text-red-500 text-center mb-8 mb-6 py-6">
                 {{ getCurrentCategoryName() }}
               </h1>
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 [@media(min-width:1200px)]:grid-cols-5 [@media(min-width:790px)]:grid-cols-3 gap-6"
-              >
+              <div class="grid responsive-grid gap-6">
                 <div
                   v-for="item in getCurrentCategoryItems()"
                   :key="item.id"
@@ -384,5 +386,35 @@ export default {
 
 .overflow-x-auto::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* base: 1 column */
+  gap: 1.5rem; /* same as Tailwind's gap-6 */
+}
+
+@media (min-width: 450px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr); /* sm: 2 columns */
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr); /* md: 3 columns */
+  }
+}
+
+@media (min-width: 1028px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr); /* md: 3 columns */
+  }
+}
+
+@media (min-width: 1420px) {
+  .responsive-grid {
+    grid-template-columns: repeat(5, 1fr); /* custom 1200px: 5 columns */
+  }
 }
 </style>
