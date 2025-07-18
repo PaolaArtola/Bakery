@@ -64,12 +64,28 @@ const cakeImages = [
       </div>
     </div>
   </div>
-  <img
-    src="@/assets/about/buttom.jpeg"
-    class="w-full max-w-4xl aspect-[5/2] mx-auto object-cover"
-    alt="Promotional image or banner"
-    loading="lazy"
-  />
+  <div class="relative w-full max-w-4xl mx-auto">
+    <!-- Image -->
+    <img
+      src="@/assets/about/buttom.jpeg"
+      class="w-full aspect-[5/2] object-cover"
+      alt="Promotional image or banner"
+      loading="lazy"
+    />
+
+    <!-- Overlay content -->
+    <div
+      class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 gap-6"
+    >
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Want To Know More About Us?</h2>
+      <button
+        class="base-button text-white px-8 py-4 rounded-full shadow"
+        style="font-weight: 700 !important"
+      >
+        Contact Us
+      </button>
+    </div>
+  </div>
 </template>
 
 <style scoped>

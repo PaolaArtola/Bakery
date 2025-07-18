@@ -46,3 +46,11 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+.base-button {
+  background-color: var(--hard-color-font);
+}
+
+.base-button:hover {
+  background-color: #bd3a4e;
+}
