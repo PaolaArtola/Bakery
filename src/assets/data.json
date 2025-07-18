@@ -63,7 +63,7 @@
         "name": "Classic Waffles",
         "description": "Traditional Belgian-style waffles with crispy exterior",
         "price": "$8.99",
-        "image": "https://images.unsplash.com/photo-1562376552-0d160dee0de9?w=300&h=300&fit=crop",
+        "image": "https://www.allrecipes.com/thmb/4c7QJ1O31LVKHh-E18yRUuu-QfU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/233920-Tender-Easy-Buttermilk-Waffles-DDMFS-3x4-0129-529693c02fb84b96a9903e982f6980bd.jpg",
         "category": "waffles"
       },
       {
@@ -71,7 +71,7 @@
         "name": "Belgian Waffles",
         "description": "Authentic Belgian waffles with deep pockets for syrup",
         "price": "$9.99",
-        "image": "https://images.unsplash.com/photo-1541599468348-e96984315921?w=300&h=300&fit=crop",
+        "image": "https://stordfkenticomedia.blob.core.windows.net/df-us/rms/media/recipesmedia/recipes/retail/x17/2010/apr/2020_belgian-style-waffles_16700_600x600.jpg?ext=.jpg",
         "category": "waffles"
       },
       {
@@ -79,7 +79,7 @@
         "name": "Chocolate Waffles",
         "description": "Decadent chocolate waffles with rich cocoa flavor",
         "price": "$10.99",
-        "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=300&h=300&fit=crop",
+        "image": "https://bakewithshivesh.com/wp-content/uploads/2022/11/WhatsApp-Image-2022-11-24-at-9.58.19-PM-1.jpeg",
         "category": "waffles"
       },
       {
@@ -87,7 +87,7 @@
         "name": "Blueberry Waffles",
         "description": "Fresh blueberry waffles bursting with fruit flavor",
         "price": "$11.99",
-        "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop",
+        "image": "https://media.istockphoto.com/id/1353655145/photo/belgian-waffles-with-blueberries-and-cup-of-coffee.jpg?s=612x612&w=0&k=20&c=7CkdT0CpsSrjvpyQZwTORefAPRCUYEB0XCJRsZC14CY=",
         "category": "waffles"
       }
     ],
@@ -97,7 +97,7 @@
         "name": "French Macaroons",
         "description": "Delicate almond macaroons with smooth ganache filling",
         "price": "$18.99",
-        "image": "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=300&h=300&fit=crop",
+        "image": "https://www.jordanwinery.com/wp-content/uploads/2020/04/French-Macaron-Cookie-Recipe-WebHero-6435.jpg",
         "category": "macaroons"
       },
       {
@@ -105,7 +105,7 @@
         "name": "Coconut Macaroons",
         "description": "Sweet coconut macaroons with a chewy texture",
         "price": "$15.99",
-        "image": "https://images.unsplash.com/photo-1587668178277-295251f900ce?w=300&h=300&fit=crop",
+        "image": "https://cdn.jwplayer.com/v2/media/geBQIHiM/thumbnails/NoFabayn.jpg",
         "category": "macaroons"
       },
       {
@@ -121,7 +121,7 @@
         "name": "Vanilla Macaroons",
         "description": "Classic vanilla macaroons with buttercream filling",
         "price": "$17.99",
-        "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=300&h=300&fit=crop",
+        "image": "https://www.demoslavueltaaldia.com/sites/default/files/1119-macarons-de-vainilla1.jpg",
         "category": "macaroons"
       }
     ],
@@ -131,7 +131,7 @@
         "name": "Mixed Nuts",
         "description": "Premium blend of roasted almonds, cashews, and pecans",
         "price": "$9.99",
-        "image": "https://images.unsplash.com/photo-1566842600175-97dca489844f?w=300&h=300&fit=crop",
+        "image": "https://media.istockphoto.com/id/496689738/photo/assorted-nuts.jpg?s=612x612&w=0&k=20&c=lJhqPaHqwvXiDFNni5nB9EKgvYlqMEljI-0JzaB-ZNA=",
         "category": "snacks"
       },
       {
@@ -139,7 +139,7 @@
         "name": "Granola Bars",
         "description": "Healthy oats and honey granola bars with dried fruits",
         "price": "$7.99",
-        "image": "https://images.unsplash.com/photo-1564669732666-d0b9ba7c1d5a?w=300&h=300&fit=crop",
+        "image": "https://media.istockphoto.com/id/187731094/photo/fruit-bar.jpg?s=612x612&w=0&k=20&c=R_R-uUMlPy-ZO7D9-ZJBEamVb3wEFBAlvSPtT1JVins=",
         "category": "snacks"
       },
       {
@@ -147,7 +147,7 @@
         "name": "Trail Mix",
         "description": "Energy-packed mix of nuts, seeds, and dried fruits",
         "price": "$8.99",
-        "image": "https://images.unsplash.com/photo-1599909533730-b7b3aa2b4a20?w=300&h=300&fit=crop",
+        "image": "https://media.istockphoto.com/id/167220669/photo/trail-mix-in-white-bowl.jpg?s=612x612&w=0&k=20&c=RLuKzHO-RfGtVQKrziZwaRY0tBH689B4eka45nrlTYE=",
         "category": "snacks"
       },
       {
@@ -155,7 +155,7 @@
         "name": "Protein Bars",
         "description": "High-protein bars with natural ingredients",
         "price": "$12.99",
-        "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop",
+        "image": "https://www.netmeds.com/images/cms/magefan_blog/protein_bar_898.jpg",
         "category": "snacks"
       }
     ],
@@ -173,7 +173,7 @@
         "name": "Hot Chocolate",
         "description": "Rich and creamy hot chocolate with whipped cream",
         "price": "$5.99",
-        "image": "https://images.unsplash.com/photo-1542990253-0b8319c4424e?w=300&h=300&fit=crop",
+        "image": "https://sallysbakingaddiction.com/wp-content/uploads/2016/11/homemade-hot-chocolate-slow-cooker.jpg",
         "category": "beverage"
       },
       {
@@ -189,7 +189,7 @@
         "name": "Smoothies",
         "description": "Fresh fruit smoothies with organic ingredients",
         "price": "$6.99",
-        "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=300&h=300&fit=crop",
+        "image": "https://media.istockphoto.com/id/1081369140/photo/healthy-appetizing-red-smoothie-dessert-in-glasses.jpg?s=612x612&w=0&k=20&c=ayAj4LQwwNIdY3aJ7fmzzG4HP_vtGboSeiP-FFO6Wm8=",
         "category": "beverage"
       },
       {
@@ -197,7 +197,7 @@
         "name": "Lemonade",
         "description": "Fresh squeezed lemonade with real lemons",
         "price": "$4.49",
-        "image": "https://images.unsplash.com/photo-1523371683702-bbbd65d0d5e3?w=300&h=300&fit=crop",
+        "image": "https://media.istockphoto.com/id/1401150816/photo/two-glasses-of-lemonade-with-mint-and-lemons.jpg?s=612x612&w=0&k=20&c=LuuInHwGO11q3aBbAmyMy4JvZ3njV4R0IRE10klTLew=",
         "category": "beverage"
       }
     ]
