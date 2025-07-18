@@ -42,14 +42,14 @@
       <!-- Desktop Sidebar (visible on screens >= md) -->
       <div class="hidden md:block w-48 bg-white min-h-screen">
         <nav class="p-6">
-          <ul class="space-y-4">
+          <ul class="space-y-4 flex flex-col gap-2">
             <li v-for="item in menuItems" :key="item.id">
               <button
                 @click="activeCategory = item.id"
                 :class="[
                   'w-full text-left py-2 px-4 rounded-lg transition-colors',
                   activeCategory === item.id
-                    ? 'bg-red-100 text-red-600 font-medium'
+                    ? 'bg-[#fff5f5] text-[#d62a2a] font-medium'
                     : 'text-gray-700 hover:bg-gray-100',
                 ]"
               >
