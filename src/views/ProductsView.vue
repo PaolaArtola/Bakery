@@ -47,12 +47,12 @@
               <button
                 @click="activeCategory = item.id"
                 :class="[
-                  'w-full text-left py-2 px-4 rounded-lg transition-colors',
+                  'w-full text-left py-2 px-4 transition-colors',
                   activeCategory === item.id
                     ? 'bg-[#fff5f5] text-[#d62a2a]'
-                    : 'text-gray-700 hover:bg-gray-100',
+                    : 'text-gray-700 hover:bg-[#fff5f5]',
                 ]"
-                style="font-weight: 600 !important"
+                style="font-weight: 600 !important; border-radius: 3rem"
               >
                 {{ item.name }}
               </button>
