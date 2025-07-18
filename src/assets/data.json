@@ -1,0 +1,73 @@
+{
+  "selections": [
+    {
+      "name": "Cookies",
+      "products": [
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        },
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        },
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        }
+      ]
+    },
+    {
+      "name": "Waffles",
+      "products": [
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        }
+      ]
+    },
+    {
+      "name": "Macarrons",
+      "products": [
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        },
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        },
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        }
+      ]
+    },
+    {
+      "name": "Snacks",
+      "products": [
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        },
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        }
+      ]
+    },
+    {
+      "name": "Beverage",
+      "products": [
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        },
+        {
+          "image": "../assets/test.png",
+          "name": "Lorem Ipsum"
+        }
+      ]
+    }
+  ]
+}
