@@ -113,7 +113,6 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Optional: If you want to slightly dim the navigation areas on hover (subtly) */
 .group:hover {
   background-color: rgba(0, 0, 0, 0.05); /* Very subtle dark overlay */
 }

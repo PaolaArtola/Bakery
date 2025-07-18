@@ -1,13 +1,13 @@
 <template>
   <div class="about flex flex-col gap-6 justify-between items-center">
-    <h1 class="text-2xl font-semibold">Sobre Nosotros</h1>
+    <h1 class="text-2xl font-semibold">Pedidos Especiales</h1>
     <p class="w-[70%] text-center text-base text-gray-700 leading-relaxed">
       Por favor, completa el formulario y alguien de nuestro equipo se pondrá en contacto contigo
       dentro de las próximas 24 horas.
     </p>
 
     <!-- FORMULARIO -->
-    <div class="form bg-pink-200 w-full max-w-[600px] p-6 rounded-lg flex flex-col gap-4">
+    <div class="form bg-[#ffccd3] w-full max-w-[600px] p-6 rounded-lg flex flex-col gap-4">
       <!-- FILAS SIMPLES -->
       <input
         type="text"
