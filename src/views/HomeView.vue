@@ -19,7 +19,7 @@
           </router-link>
         </div>
         <div class="flex-1 flex justify-center">
-          <img src="@/assets/about/filler.png" alt="dessert" class="w-full max-w-md rounded-lg" />
+          <img src="@/assets/home/home1.png" alt="dessert" class="w-full max-w-md rounded-lg" />
         </div>
       </div>
     </section>
@@ -28,21 +28,29 @@
     <section class="bg-pink-200 py-20 px-4 flex justify-center">
       <div class="w-full max-w-6xl flex flex-col items-center text-center gap-10">
         <h2 class="text-4xl font-bold">Descubre nuestros más vendidos</h2>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full">
-          <div v-for="n in 4" :key="n" class="flex flex-col items-center gap-2">
+          <div
+            v-for="(producto, index) in productos"
+            :key="index"
+            class="flex flex-col items-center gap-2"
+          >
             <img
-              src="@/assets/about/filler.png"
-              alt="item"
+              :src="producto.imagen"
+              :alt="producto.nombre"
               class="mb-2 w-full h-64 object-cover rounded-xl transform transition-transform duration-300 hover:scale-105"
             />
-            <h3 class="text-lg font-semibold">Producto {{ n }}</h3>
+            <h3 class="text-lg font-semibold">{{ producto.nombre }}</h3>
           </div>
         </div>
-        <button
+
+        <!-- Botón de Ver Más -->
+        <router-link
+          to="/products"
           class="bg-[#9BCCA3] hover:bg-pink-700 text-white py-4 px-8 rounded-xl text-lg transition duration-300"
         >
           Ver más
-        </button>
+        </router-link>
       </div>
     </section>
 
@@ -53,7 +61,7 @@
       >
         <div class="flex-1 flex justify-center">
           <img
-            src="@/assets/about/filler.png"
+            src="@/assets/home/home3.svg"
             alt="special order"
             class="w-full max-w-xl rounded-2xl"
           />
@@ -87,8 +95,8 @@
 
         <!-- OPINIÓN ACTUAL -->
         <div class="relative px-8 w-full max-w-2xl">
-          <h3 class="text-2xl font-semibold mb-4">{{ currentFeedback.name }}</h3>
-          <p class="text-xl text-gray-700 leading-relaxed">{{ currentFeedback.comment }}</p>
+          <p class="text-2xl font-semibold mb-4">{{ currentFeedback.comment }}</p>
+          <p class="text-xl text-gray-700 leading-relaxed">{{ currentFeedback.name }}</p>
 
           <div class="absolute inset-y-0 left-0 flex items-center pl-3">
             <button @click="prevFeedback" class="text-3xl text-pink-600 hover:text-pink-800">
@@ -118,61 +126,59 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HomeView',
-  data() {
-    return {
-      currentIndex: 0,
-      intervalId: null,
-      feedbackList: [
-        {
-          name: 'Lucía Fernández',
-          comment:
-            'Los postres son simplemente espectaculares. El sabor y la presentación siempre me sorprenden. ¡Totalmente recomendado!',
-        },
-        {
-          name: 'Carlos Méndez',
-          comment:
-            'Pedí una torta personalizada y quedó mejor de lo que imaginaba. La atención fue excelente desde el primer contacto.',
-        },
-        {
-          name: 'Andrea Torres',
-          comment:
-            'Me encanta el servicio de delivery, llega puntual y los empaques son súper lindos. Siempre que puedo, hago un pedido.',
-        },
-        {
-          name: 'Javier Gómez',
-          comment:
-            'Es la primera vez que pido y ya me hice fan. Sin duda volveré a comprar. Todo estuvo delicioso.',
-        },
-        {
-          name: 'Valeria Rivas',
-          comment:
-            'La calidad y frescura de los productos es incomparable. ¡Un postre de Sunny Bakery siempre me alegra el día!',
-        },
-      ],
-    }
+<script setup>
+import { ref, computed } from 'vue'
+
+// Lista de productos para Best Sellers
+const productos = [
+  {
+    nombre: 'Panes',
+    imagen: new URL('@/assets/home/product1.png', import.meta.url).href,
   },
-  computed: {
-    currentFeedback() {
-      return this.feedbackList[this.currentIndex]
-    },
+  {
+    nombre: 'Cupcakes',
+    imagen: new URL('@/assets/home/product2.png', import.meta.url).href,
   },
-  methods: {
-    nextFeedback() {
-      this.currentIndex = (this.currentIndex + 1) % this.feedbackList.length
-    },
-    prevFeedback() {
-      this.currentIndex =
-        (this.currentIndex - 1 + this.feedbackList.length) % this.feedbackList.length
-    },
+  {
+    nombre: 'Macarrones',
+    imagen: new URL('@/assets/home/product3.png', import.meta.url).href,
   },
-  mounted() {
-    this.intervalId = setInterval(this.nextFeedback, 5000)
+  {
+    nombre: 'Pasteles',
+    imagen: new URL('@/assets/home/product4.png', import.meta.url).href,
   },
-  beforeUnmount() {
-    clearInterval(this.intervalId)
+]
+
+// Lista de feedbacks
+const feedbackList = [
+  {
+    name: 'Camila López',
+    comment: 'Los pasteles son deliciosos y el servicio es excelente.',
   },
+  {
+    name: 'Renato Díaz',
+    comment: 'Siempre compro aquí para celebraciones. ¡Recomendado!',
+  },
+  {
+    name: 'Lucía Torres',
+    comment: 'Rápidos, frescos y con muy buena presentación.',
+  },
+  {
+    name: 'Sofía García',
+    comment: 'El cheesecake fue el favorito de la fiesta. ¡Gracias!',
+  },
+]
+
+// Estado del carrusel
+const currentIndex = ref(0)
+
+const currentFeedback = computed(() => feedbackList[currentIndex.value])
+
+const nextFeedback = () => {
+  currentIndex.value = (currentIndex.value + 1) % feedbackList.length
+}
+
+const prevFeedback = () => {
+  currentIndex.value = (currentIndex.value - 1 + feedbackList.length) % feedbackList.length
 }
 </script>
