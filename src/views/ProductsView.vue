@@ -81,7 +81,7 @@
                 ></path>
               </svg>
             </div>
-            <p class="text-gray-600 mb-4">Failed to load menu data</p>
+            <p class="text-gray-600 mb-4">Fallo al cargar los datos del menu</p>
             <button
               @click="retryFetch"
               class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-medium transition-colors"
@@ -99,35 +99,40 @@
                 :key="category.categoryId"
                 class="mb-12"
               >
-                <h2 class="text-center text-2xl font-bold text-gray-800 mb-6 pb-2">
+                <h2 class="text-center text-2xl font-bold text-gray-800 mb-6 py-6">
                   {{ category.categoryName }}
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
-                  <div
-                    v-for="item in category.items"
-                    :key="item.id"
-                    class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
-                  >
-                    <div class="aspect-square bg-gray-100 flex items-center justify-center">
-                      <img :src="item.image" :alt="item.name" class="w-full h-full object-cover" />
+                  <div v-for="item in category.items" :key="item.id" class="overflow-hidden">
+                    <div class="aspect-square flex items-center justify-center">
+                      <img
+                        :src="item.image"
+                        :alt="item.name"
+                        class="base-image w-full h-full object-cover"
+                      />
                     </div>
-                    <div class="p-4">
-                      <h3 class="text-lg font-medium text-gray-800 mb-2">
+                    <div
+                      class="flex flex-col gap-2 p-4 w-full min-h-[4rem] items-center justify-between"
+                    >
+                      <h4 class="min-h-[3.5rem] mt-4 mb-2 line-clamp-3 w-[97%] text-center">
                         {{ item.name }}
-                      </h3>
-                      <p v-if="item.description" class="text-sm text-gray-600 mb-3">
+                      </h4>
+                      <!-- <p
+                        v-if="item.description"
+                        class="text-sm text-gray-600 mb-3 line-clamp-2 h-10 w-[97%]"
+                      >
                         {{ item.description }}
                       </p>
-                      <div class="flex items-center justify-between">
-                        <span v-if="item.price" class="text-lg font-bold text-red-500">
-                          {{ item.price }}
-                        </span>
-                        <button
-                          class="bg-[#9BCCA3] hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium transition-colors"
-                        >
-                          Order Now
-                        </button>
-                      </div>
+                      <span v-if="item.price" class="text-lg font-bold text-red-500 h-6">
+                        {{ item.price }}
+                      </span> -->
+                      <div class="flex-1"></div>
+                      <button
+                        class="bg-[#9BCCA3] hover:bg-pink-700 text-white w-[87%] py-1 rounded-full transition-colors"
+                        style="font-size: 0.9rem; font-weight: 700"
+                      >
+                        Comprar
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -136,7 +141,7 @@
 
             <!-- Single Category View -->
             <div v-else>
-              <h1 class="text-3xl font-bold text-red-500 text-center mb-8">
+              <h1 class="text-3xl font-bold text-red-500 text-center mb-8 mb-6 py-6">
                 {{ getCurrentCategoryName() }}
               </h1>
               <div
@@ -145,28 +150,37 @@
                 <div
                   v-for="item in getCurrentCategoryItems()"
                   :key="item.id"
-                  class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                  class="overflow-hidden"
                 >
-                  <div class="aspect-square bg-gray-100 flex items-center justify-center">
-                    <img :src="item.image" :alt="item.name" class="w-full h-full object-cover" />
+                  <div class="aspect-square flex items-center justify-center">
+                    <img
+                      :src="item.image"
+                      :alt="item.name"
+                      class="base-image w-full h-full object-cover"
+                    />
                   </div>
-                  <div class="p-4">
-                    <h3 class="text-lg font-medium text-gray-800 mb-2">
+                  <div
+                    class="flex flex-col gap-2 p-4 w-full min-h-[4rem] items-center justify-between"
+                  >
+                    <h4 class="min-h-[3.5rem] mt-4 mb-2 line-clamp-3 w-[97%] text-center">
                       {{ item.name }}
-                    </h3>
-                    <p v-if="item.description" class="text-sm text-gray-600 mb-3">
-                      {{ item.description }}
-                    </p>
-                    <div class="flex items-center justify-between">
-                      <span v-if="item.price" class="text-lg font-bold text-red-500">
-                        {{ item.price }}
-                      </span>
-                      <button
-                        class="bg-[#9BCCA3] hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium transition-colors"
+                    </h4>
+                    <!-- <p
+                        v-if="item.description"
+                        class="text-sm text-gray-600 mb-3 line-clamp-2 h-10 w-[97%]"
                       >
-                        Order Now
-                      </button>
-                    </div>
+                        {{ item.description }}
+                      </p>
+                      <span v-if="item.price" class="text-lg font-bold text-red-500 h-6">
+                        {{ item.price }}
+                      </span> -->
+                    <div class="flex-1"></div>
+                    <button
+                      class="bg-[#9BCCA3] hover:bg-pink-700 text-white w-[87%] py-1 rounded-full transition-colors"
+                      style="font-size: 0.9rem; font-weight: 700"
+                    >
+                      Comprar
+                    </button>
                   </div>
                 </div>
               </div>
