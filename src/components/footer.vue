@@ -6,7 +6,7 @@
       >
         <!-- Left Section - Visit Us Info -->
         <div class="flex flex-col gap-4">
-          <h3 class="text-3xl font-bold text-gray-900 mb-6">Visit Us</h3>
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">Visítanos</h3>
 
           <div class="space-y-6 flex flex-col gap-3">
             <!-- Address -->
@@ -30,7 +30,7 @@
                   d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                 />
               </svg>
-              <span class="text-gray-700">9998 Hayes Isle, Manterfurt 03581</span>
+              <span class="text-gray-700">55555, Villa El Salvador 03581</span>
             </div>
 
             <!-- Phone -->
@@ -48,7 +48,7 @@
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span class="text-gray-700">505-418-0415</span>
+              <span class="text-gray-700">999-999-999</span>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
         <!-- Right Section - Social Media -->
         <div class="flex-shrink-0">
           <div class="flex items-center gap-4">
-            <span class="text-gray-700 font-medium">Follow Us</span>
+            <span class="text-gray-700 font-medium">Síguenos</span>
             <div class="flex gap-3">
               <!-- Facebook -->
               <a href="#" class="w-10 h-10 rounded-lg flex items-center justify-center">
