@@ -1,8 +1,8 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-pink-200 px-4 py-16">
+  <div class="min-h-screen flex items-center justify-center bg-[#ffccd3] px-4 py-16">
     <div class="max-w-6xl w-full flex flex-col md:flex-row items-stretch gap-12">
       <!-- IZQUIERDA: Texto alineado con parte superior del formulario -->
-      <div class="w-full md:w-1/2 flex flex-col items-start bg-pink-200 p-8 rounded-xl gap-4">
+      <div class="w-full md:w-1/2 flex flex-col items-start bg-[#ffccd3] p-8 rounded-xl gap-4">
         <h2 class="text-5xl font-bold text-gray-800 leading-snug text-left">
           Pongámonos en contacto
         </h2>

@@ -7,7 +7,7 @@
     </p>
 
     <!-- FORMULARIO -->
-    <div class="form bg-pink-200 w-full max-w-[600px] p-6 rounded-lg flex flex-col gap-4">
+    <div class="form bg-[#ffccd3] w-full max-w-[600px] p-6 rounded-lg flex flex-col gap-4">
       <!-- FILAS SIMPLES -->
       <input
         type="text"
