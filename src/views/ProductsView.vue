@@ -17,18 +17,19 @@
       <h2 class="text-2xl md:text-3xl font-semibold">¿Quieres saber más sobre nosotros?</h2>
     </div>
   </div>
-  <div class="min-h-screen bg-pink-50">
+  <div class="min-h-screen bg-[#ffccd3]">
     <!-- Mobile Top Bar (visible on screens < md) -->
     <div class="md:hidden bg-white p-4">
-      <div class="flex space-x-2 overflow-x-auto">
+      <div ref="scrollContainer" class="flex space-x-2 gap-1.5 overflow-x-auto scrollbar-hide">
         <button
           v-for="item in menuItems"
           :key="item.id"
-          @click="activeCategory = item.id"
+          :ref="(el) => (buttonRefs[item.id] = el)"
+          @click="handleClick(item.id)"
           :class="[
-            'px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-colors',
+            'px-4 py-2 rounded-[100rem] text-sm font-medium whitespace-nowrap transition-colors',
             activeCategory === item.id
-              ? 'bg-red-500 text-white'
+              ? 'bg-[#cc4156] text-white'
               : 'bg-gray-100 text-gray-700 hover:bg-gray-200',
           ]"
         >
@@ -101,7 +102,7 @@
                 <h2 class="text-center text-2xl font-bold text-gray-800 mb-6 pb-2">
                   {{ category.categoryName }}
                 </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
                   <div
                     v-for="item in category.items"
                     :key="item.id"
@@ -122,7 +123,7 @@
                           {{ item.price }}
                         </span>
                         <button
-                          class="bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-full font-medium transition-colors"
+                          class="bg-[#9BCCA3] hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium transition-colors"
                         >
                           Order Now
                         </button>
@@ -138,7 +139,9 @@
               <h1 class="text-3xl font-bold text-red-500 text-center mb-8">
                 {{ getCurrentCategoryName() }}
               </h1>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 [@media(min-width:1200px)]:grid-cols-5 [@media(min-width:790px)]:grid-cols-3 gap-6"
+              >
                 <div
                   v-for="item in getCurrentCategoryItems()"
                   :key="item.id"
@@ -159,7 +162,7 @@
                         {{ item.price }}
                       </span>
                       <button
-                        class="bg-green-400 hover:bg-green-500 text-white px-4 py-2 rounded-full font-medium transition-colors"
+                        class="bg-[#9BCCA3] hover:bg-pink-700 text-white px-4 py-2 rounded-full font-medium transition-colors"
                       >
                         Order Now
                       </button>
@@ -191,12 +194,69 @@ export default {
       loading: true,
       error: null,
       dataUrl: '/src/assets/data.json',
+      buttonRefs: {},
     }
   },
   async mounted() {
     await this.fetchMenuData()
   },
   methods: {
+    handleClick(id) {
+      this.activeCategory = id
+
+      this.$nextTick(() => {
+        const button = this.buttonRefs[id]
+        const container = this.$refs.scrollContainer
+
+        if (!button || !container) return
+
+        // Get container and button dimensions
+        const containerRect = container.getBoundingClientRect()
+        const buttonRect = button.getBoundingClientRect()
+
+        // Calculate container's scrollable area
+        const containerScrollWidth = container.scrollWidth
+        const containerClientWidth = container.clientWidth
+        const maxScrollLeft = containerScrollWidth - containerClientWidth
+
+        // Calculate button's position relative to container
+        const buttonOffsetLeft = button.offsetLeft
+        const buttonWidth = button.offsetWidth
+
+        // Calculate desired scroll position with offset
+        const offset = 40 // pixels to the right of start
+        let targetScrollLeft = buttonOffsetLeft - offset
+
+        // Handle edge cases
+        if (targetScrollLeft < 0) {
+          // Button is at the beginning, don't scroll past start
+          targetScrollLeft = 0
+        } else if (targetScrollLeft > maxScrollLeft) {
+          // Button is at the end, don't scroll past end
+          targetScrollLeft = maxScrollLeft
+        } else {
+          // Check if button would be fully visible with offset
+          const buttonEndPosition = buttonOffsetLeft + buttonWidth
+          const visibleEndPosition = targetScrollLeft + containerClientWidth
+
+          if (buttonEndPosition > visibleEndPosition) {
+            // Button would be cut off, adjust to show full button
+            targetScrollLeft = buttonEndPosition - containerClientWidth + offset
+
+            // Ensure we don't exceed max scroll
+            if (targetScrollLeft > maxScrollLeft) {
+              targetScrollLeft = maxScrollLeft
+            }
+          }
+        }
+
+        // Smooth scroll to calculated position
+        container.scrollTo({
+          left: targetScrollLeft,
+          behavior: 'smooth',
+        })
+      })
+    },
     async fetchMenuData() {
       try {
         this.loading = true
@@ -283,6 +343,16 @@ export default {
 </script>
 
 <style scoped>
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 /* Custom scrollbar for mobile top bar */
 .overflow-x-auto::-webkit-scrollbar {
   height: 4px;
