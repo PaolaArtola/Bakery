@@ -64,11 +64,11 @@ const cakeImages = [
       </div>
     </div>
   </div>
-  <div class="relative w-full max-w-4xl mx-auto">
+  <div class="relative w-full h-[20rem] overflow-hidden">
     <!-- Image -->
     <img
       src="@/assets/about/buttom.jpeg"
-      class="w-full aspect-[5/2] object-cover"
+      class="w-full h-full object-cover"
       alt="Promotional image or banner"
       loading="lazy"
     />
@@ -77,7 +77,7 @@ const cakeImages = [
     <div
       class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 gap-6"
     >
-      <h2 class="text-2xl md:text-3xl font-semibold mb-4">¿Quieres saber más sobre nosotros?</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold">Want To Know More About Us?</h2>
       <button
         class="base-button text-white px-8 py-4 rounded-full shadow"
         style="font-weight: 700 !important"
