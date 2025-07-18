@@ -17,9 +17,11 @@ const cakeImages = [
     </div>
     <h1 class="">Sobre Nosotros</h1>
     <p class="w-[70%] text-center text-base text-gray-70 leading-relaxed">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptate quod! Quis, quod
-      totam perspiciatis natus minima quisquam laborum unde nisi eaque aspernatur quia aliquam,
-      dolorum impedit quos. Eaque, minus?
+      En Sunny Bakery, horneamos con el corazón. Somos una panadería artesanal inspirada en la
+      calidez del hogar y el amor incondicional de Sunny, nuestra perrita y alma de este proyecto.
+      Cada pan, pastel y dulce que sale de nuestro horno está hecho con ingredientes frescos,
+      recetas caseras y una gran dosis de cariño. Nos encanta ver cómo nuestras creaciones forman
+      parte de tus momentos más especiales.
     </p>
 
     <!-- Segunda sección con imagen a la derecha en pantallas grandes -->
@@ -34,9 +36,11 @@ const cakeImages = [
       <div class="text-center at520:text-left at520:w-1/2 space-y-4">
         <h2 class="text-3xl font-bold text-gray-800">Nuestra Misión</h2>
         <p class="text-gray-600 leading-relaxed text-pretty">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, commodi quas tempora
-          consequuntur, dolorum, enim quidem praesentium labore molestiae inventore nisi officia ea?
-          Sapiente reprehenderit sunt iure, et qui incidunt.
+          Nuestra misión es brindar productos de panadería frescos, deliciosos y honestos que hagan
+          sonreír a quienes los disfrutan. Creemos en el poder de lo simple: una masa bien
+          fermentada, un bizcocho suave, una galleta crujiente, hechos con tiempo y dedicación.
+          Queremos que cada visita a Sunny Bakery sea una experiencia acogedora que despierte
+          recuerdos y cree nuevos.
         </p>
       </div>
     </div>
@@ -52,9 +56,10 @@ const cakeImages = [
       <div class="text-center at520:text-left at520:w-1/2 space-y-4">
         <h2>Nuestra Promesa</h2>
         <p class="text-gray-600 leading-relaxed text-pretty">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, commodi quas tempora
-          consequuntur, dolorum, enim quidem praesentium labore molestiae inventore nisi officia ea?
-          Sapiente reprehenderit sunt iure, et qui incidunt.
+          Te prometemos calidad, frescura y un trato cercano. En Sunny Bakery nos comprometemos a
+          mantener altos estándares en cada detalle: desde la elección de los ingredientes hasta la
+          atención que recibes al entrar por nuestra puerta. Así como Sunny nos inspira con su
+          alegría diaria, queremos compartir esa misma alegría contigo en cada mordisco.
         </p>
       </div>
     </div>
