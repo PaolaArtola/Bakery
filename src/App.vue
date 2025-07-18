@@ -5,15 +5,16 @@ import CustomFooter from '@/components/footer.vue'
 </script>
 
 <template>
-  <CustomHeader />
+  <div class="min-h-screen flex flex-col">
+    <CustomHeader />
 
-  <!-- Actual page content starts here -->
-  <main style="margin-top: 120px !important">
-    <!-- Adjust `mt` to match header height -->
-    <RouterView />
-  </main>
+    <!-- Main content takes remaining space -->
+    <main class="flex-grow" style="margin-top: 120px !important">
+      <RouterView />
+    </main>
 
-  <CustomFooter />
+    <CustomFooter />
+  </div>
 </template>
 
 <style scoped></style>
