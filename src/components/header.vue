@@ -69,44 +69,44 @@ onUnmounted(() => {
         <li>
           <RouterLink
             to="/about"
-            class="text-gray-700 hover:text-amber-600 transition-colors duration-200 relative group py-2"
+            class="text-gray-700 hover:text-[#cc4156] transition-colors duration-200 relative group py-2"
           >
-            About us
+            Nosotros
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#cc4156] transition-all duration-300 group-hover:w-full"
             ></span>
           </RouterLink>
         </li>
         <li>
           <RouterLink
             to="/products"
-            class="text-gray-700 hover:text-amber-600 transition-colors duration-200 relative group py-2"
+            class="text-gray-700 hover:text-[#cc4156] transition-colors duration-200 relative group py-2"
           >
-            Products
+            Productos
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#cc4156] transition-all duration-300 group-hover:w-full"
             ></span>
           </RouterLink>
         </li>
         <li>
           <RouterLink
             to="/special-orders"
-            class="text-gray-700 hover:text-amber-600 transition-colors duration-200 relative group py-2"
+            class="text-gray-700 hover:text-[#cc4156] transition-colors duration-200 relative group py-2"
           >
-            Special Orders
+            Pedidos Especiales
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#cc4156] transition-all duration-300 group-hover:w-full"
             ></span>
           </RouterLink>
         </li>
         <li>
           <RouterLink
             to="/contact"
-            class="text-gray-700 hover:text-amber-600 transition-colors duration-200 relative group py-2"
+            class="text-gray-700 hover:text-[#cc4156] transition-colors duration-200 relative group py-2"
           >
-            Contact
+            Contacto
             <span
-              class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-[#cc4156] transition-all duration-300 group-hover:w-full"
             ></span>
           </RouterLink>
         </li>

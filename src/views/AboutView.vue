@@ -15,7 +15,7 @@ const cakeImages = [
         container-class="absolute inset-0 w-full h-full object-cover"
       />
     </div>
-    <h1 class="">About Us</h1>
+    <h1 class="">Sobre Nosotros</h1>
     <p class="w-[70%] text-center text-base text-gray-70 leading-relaxed">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptate quod! Quis, quod
       totam perspiciatis natus minima quisquam laborum unde nisi eaque aspernatur quia aliquam,
@@ -32,7 +32,7 @@ const cakeImages = [
         class="base-image w-full at520:w-1/2 rounded-lg shadow-md aspect-[8/5] object-cover"
       />
       <div class="text-center at520:text-left at520:w-1/2 space-y-4">
-        <h2 class="text-3xl font-bold text-gray-800">Our Mission</h2>
+        <h2 class="text-3xl font-bold text-gray-800">Nuestra Misión</h2>
         <p class="text-gray-600 leading-relaxed text-pretty">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, commodi quas tempora
           consequuntur, dolorum, enim quidem praesentium labore molestiae inventore nisi officia ea?
@@ -50,7 +50,7 @@ const cakeImages = [
         class="base-image w-full at520:w-1/2 rounded-lg shadow-md aspect-[8/5] object-cover"
       />
       <div class="text-center at520:text-left at520:w-1/2 space-y-4">
-        <h2>Our Promise</h2>
+        <h2>Nuestra Promesa</h2>
         <p class="text-gray-600 leading-relaxed text-pretty">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, commodi quas tempora
           consequuntur, dolorum, enim quidem praesentium labore molestiae inventore nisi officia ea?
